@@ -4,7 +4,7 @@ from statistics import median
 
 def produce_values(how_many):
     for i in range(1, how_many + 1):
-        print("producing purchase %i", i)
+        print(f"producing purchase {i}")
         yield i
 
 

@@ -23,7 +23,7 @@ class DBHandler:
 
 def stream_db_records(db_handler):
     """Example of .close()
-    >>> streamer = stream_db_records(DBHandler("testdb"))  # doctest: +ELLIPSIS
+    >>> streamer = stream_db_records(DBHandler("testdb"))
     >>> len(next(streamer))
     10
     >>> len(next(streamer))
@@ -62,13 +62,13 @@ def stream_data(db_handler):
 
 
 if __name__ == '__main__':
-    # streamer = stream_db_records(DBHandler("testdb"))
-    # print(next(streamer))
-    # print(next(streamer))
-    # streamer.close()
+    streamer = stream_db_records(DBHandler("testdb"))
+    print(next(streamer))
+    print(next(streamer))
+    streamer.close()
 
     # throw()
-    streamer = stream_data(DBHandler("testdb"))
-    print(len(next(streamer)))
-    streamer.throw(CustomException)
-    streamer.throw(RuntimeError)
+    # streamer = stream_data(DBHandler("testdb"))
+    # print(len(next(streamer)))
+    # streamer.throw(CustomException)
+    # streamer.throw(RuntimeError)
